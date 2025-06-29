@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="البوابة الموحدة للخدمات الحكومية - البحرين">
+<meta property="og:description" content="اكتشف خدمات الحكومة الإلكترونية في البحرين بسهولة وسرعة. الهوية، المرور، الكهرباء، الصحة، التعليم، وأكثر.">
+<meta property="og:image" content="https://img-a.alayam.com/aymnews/upload/net/INAF_20210908123938039.jpg?404=d&h=946&w=1446&scale=both&mode=pad&c.focus=faces&c.finalmode=crop&f.threshold=2,4&f.minsize=2">
+<meta property="og:url" content="https://example.com"> 
+
+
+
+  <title>موقع خدمات</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      padding-top: 100px; 
+      padding-bottom: 60px; 
+      background-color: #f9f9f9;
+    }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100px; 
+  background-color: white; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+  padding: 0 20px; 
+  box-sizing: border-box;
+}
+
+    header img {
+      width: 150px;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    .card-simple-medium {
+      width: 100%;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: box-shadow 0.3s;
+      overflow: hidden;
+    }
+
+    .card-simple-medium:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-img-top {
+      width: 48px;
+      margin: 20px auto 10px auto;
+      display: block;
+    }
+
+    .card-body {
+      padding: 10px;
+    }
+
+    h5.card-text {
+      margin: 10px 0;
+      font-size: 16px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 20px auto;
+      box-sizing: border-box;
+    }
+
+    .card-image img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+video#videodesktop {
+  display: block;
+  width: calc(100% - 8px); 
+  height: 200px;
+  margin: 4px auto 0 auto; 
+  padding: 0;
+  z-index: 0;
+}
+
+#text1{
+    text-align: center;
+    margin-top: 15px;
+}
+
+    #imghedar{
+        margin-left: 200px;
+        width: 240px;
+        margin-left: -1px;
+    }
+
+
+  </style>
+</head>
+<body>
+
+    
+<header>
+  <img id="imghedar" src="Logo_ar.svg" alt="شعار">
+</header>
+
+
+ 
+<div class="vbg" bis_skin_checked="1">
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+<video id="videodesktop" class="" autoplay="" loop="" muted="" playsinline="" src="blob:https://services.bahrain.bh/2aa5e9fb-a42e-48c7-852d-da68eb96da43"> </video>
+<script>
+  var videoDesktop = document.getElementById('videodesktop');
+ 
+var videoDesktopSrc = 'https://druiszk7cqclg.cloudfront.net/57675905-98b2-4237-b09e-0c4310aeb480/AppleHLS1/homepagevideo_desktop.m3u8';
+
+
+
+  if (Hls.isSupported()) {
+    var hls = new Hls();
+    hls.loadSource(videoDesktopSrc);
+    hls.attachMedia(videoDesktop);
+    console.log('isSupported');
+  	hls.on(Hls.Events.MANIFEST_PARSED, function() {
+    videoDesktop.play();
+	});
+  }
+  else if (videoDesktop.canPlayType('application/vnd.apple.mpegurl')) {
+    console.log('can play');
+    videoDesktop.src = videoDesktopSrc;
+
+  }
+</script>     
+
+<h3 id="text1"> اختر الخدمة المطلوبة </h3>
+ </div>
+
+	
+
+			
+			</div><!-- /.search-alt -->
+		</div><!-- /.section__inner -->
+			
+
+	</div><!-- /.section-search -->
+	
+	
+</div>
+<div id="maincontent" class="overlay section-search" bis_skin_checked="1">
+
+
+	
+
+			<div class="search-alt js-search-alt" bis_skin_checked="1">
+				<form action="https://services.bahrain.bh/wps/portal/ar/searchhomear" method="get">
+
+
+
+
+
+					
+					</button>
+				</form>
+			</div>
+		</div>
+			
+
+	</div>
+
+
+
+
+  <div class="container">
+    
+    <div class="card-simple-medium">
+          <a href="select1.html" class="card-link">
+        <img src="https://www.bahrain.bh/dxresources/images/svg/themes/Identity-Passport-and-Visa.svg" class="card-img-top" alt="الهوية والجوازات والتأشيرات">
+        <div class="card-body">
+          <h5 class="card-text">الهوية والجوازات والتأشيرات</h5>
+        </div>
+      </a>
+    </div>
+
+    <div class="card-simple-medium" bis_skin_checked="1">
+	 <img src="https://www.bahrain.bh/dxresources/images/svg/themes/Traffic-Vehicle-and-Transport.svg" class="card-img-top" alt="المرور والمركبات والمواصلات" style="width: 48;">								
+	<div class="card-body" bis_skin_checked="1">
+	<h5 class="card-text">المرور والمركبات والمواصلات</h5>
+	</div>
+	</a>
+	</div>
+
+    <div class="col-6 col-md-4 col-lg-3" bis_skin_checked="1">
+								<div class="card-simple-medium" bis_skin_checked="1">
+										 <img src="https://www.bahrain.bh/dxresources/images/svg/themes/Electricity-Water-and-Infrastructure.svg" class="card-img-top" alt="الكهرباء والماء والبنية التحتية" style="width: 48;">
+										
+										<div class="card-body" bis_skin_checked="1">
+											<h5 class="card-text">الكهرباء والماء والبنية التحتية</h5>
+										</div>
+									</a>
+								</div>
+							</div>
+<div class="col-6 col-md-4 col-lg-3" bis_skin_checked="1">
+								<div class="card-simple-medium" bis_skin_checked="1">
+										 <img src="https://www.bahrain.bh/dxresources/images/svg/themes/Education-and-Students.svg" class="card-img-top" alt="التعليم والطلبة" style="width: 48;">
+										
+										<div class="card-body" bis_skin_checked="1">
+											<h5 class="card-text">التعليم والطلبة</h5>
+										</div>
+									</a>
+								</div>
+							</div>
+
+                            <div class="col-6 col-md-4 col-lg-3" bis_skin_checked="1">
+								<div class="card-simple-medium" bis_skin_checked="1">
+									<a href="https://services.bahrain.bh/wps/portal/ar/BSP/GSX-UI-MultipleThemesByEService/GSX-UI-EServicesByTheme?themeID=2">
+										 <img src="https://www.bahrain.bh/dxresources/images/svg/themes/Courts-and-Legislations.svg" class="card-img-top" alt="المحاكم والتشريعات" style="width: 48;">
+										
+										<div class="card-body" bis_skin_checked="1">
+											<h5 class="card-text">المحاكم والتشريعات</h5>
+										</div>
+									</a>
+								</div>
+							</div>
+
+                            <div class="col-6 col-md-4 col-lg-3" bis_skin_checked="1">
+								<div class="card-simple-medium" bis_skin_checked="1">
+										 <img src="https://www.bahrain.bh/dxresources/images/svg/themes/Health-and-Medical-Care.svg" class="card-img-top" alt="الصحة والرعاية الطبية" style="width: 48;">
+										
+										<div class="card-body" bis_skin_checked="1">
+											<h5 class="card-text">الصحة والرعاية الطبية</h5>
+										</div>
+									</a>
+								</div>
+							</div>
+
+                            <div class="col-6 col-md-4 col-lg-3" bis_skin_checked="1">
+								<div class="card-simple-medium" bis_skin_checked="1">
+										 <img src="https://www.bahrain.bh/dxresources/images/svg/themes/Marriage-Birth-and-Death.svg" class="card-img-top" alt="الزواج والميلاد والوفاة" style="width: 48;">
+										
+										<div class="card-body" bis_skin_checked="1">
+											<h5 class="card-text">الزواج والميلاد والوفاة</h5>
+										</div>
+									</a>
+								</div>
+							</div>
+
+                            <div class="col-6 col-md-4 col-lg-3" bis_skin_checked="1">
+								<div class="card-simple-medium" bis_skin_checked="1">
+										 <img src="https://www.bahrain.bh/dxresources/images/svg/themes/Housing-and-Addresses.svg" class="card-img-top" alt="السكن والعناوين" style="width: 48;">
+										
+										<div class="card-body" bis_skin_checked="1">
+											<h5 class="card-text">السكن والعناوين</h5>
+										</div>
+									</a>
+								</div>
+							</div>
+
+                            <div class="col-6 col-md-4 col-lg-3" bis_skin_checked="1">
+								<div class="card-simple-medium" bis_skin_checked="1">
+										 <img src="https://www.bahrain.bh/dxresources/images/svg/themes/Business-and-Investment.svg" class="card-img-top" alt="قطاع الأعمال والاستثمار والضرائب" style="width: 48;">
+										
+										<div class="card-body" bis_skin_checked="1">
+											<h5 class="card-text">قطاع الأعمال والاستثمار والضرائب</h5>
+										</div>
+									</a>
+								</div>
+							</div>
+
+                            <div class="col-6 col-md-4 col-lg-3" bis_skin_checked="1">
+								<div class="card-simple-medium" bis_skin_checked="1">
+										 <img src="https://www.bahrain.bh/dxresources/images/svg/themes/Employment-and-Employees.svg" class="card-img-top" alt="التوظيف والموظفين" style="width: 48;">
+										
+										<div class="card-body" bis_skin_checked="1">
+											<h5 class="card-text">التوظيف والموظفين</h5>
+										</div>
+									</a>
+								</div>
+							</div>
+
+                            <div class="col-6 col-md-4 col-lg-3" bis_skin_checked="1">
+								<div class="card-simple-medium" bis_skin_checked="1">
+										 <img src="https://www.bahrain.bh/dxresources/images/svg/themes/Social-Insurance-and-Financial-Support.svg" class="card-img-top" alt="الضمان الاجتماعي والدعم المالي" style="width: 48;">
+										
+										<div class="card-body" bis_skin_checked="1">
+											<h5 class="card-text">الضمان الاجتماعي والدعم المالي</h5>
+										</div>
+									</a>
+								</div>
+							</div>
+
+                            <div class="col-6 col-md-4 col-lg-3" bis_skin_checked="1">
+								<div class="card-simple-medium" bis_skin_checked="1">
+										 <img src="https://www.bahrain.bh/dxresources/images/svg/themes/Islamic-Affairs.svg" class="card-img-top" alt="الشؤون الإسلامية" style="width: 48;">
+										
+										<div class="card-body" bis_skin_checked="1">
+											<h5 class="card-text">الشؤون الإسلامية</h5>
+										</div>
+									</a>
+								</div>
+							</div>
+  </div>
+
+	
+	
+</div>
+<div style="text-align: center;">
+  <img src="Sharekna+Banner+bahrain.bh-04.jpg" style="max-width: 100%; height: auto;" alt="صورة كاملة">
+
+
+
+
+
+
+
+
+
+
+  <div class="grid-container">
+  <div class="card-simple-medium">
+    <div class="card-image">
+      <img src="https://www.bahrain.bh/dxresources/logo/entity/Survey_and_Land_Registration_Bureau_logo.png" alt="جهاز المساحة والتسجيل العقاري">
+    </div>
+    <div class="card-body">
+      <h5 class="card-text">جهاز المساحة والتسجيل العقاري</h5>
+    </div>
+  </div>
+
+  <div class="card-simple-medium">
+    <div class="card-image">
+      <img src="https://www.bahrain.bh/dxresources/logo/entity/Social_Insurance_Organization_logo.png" alt="الهيئة العامة للتأمين الاجتماعي">
+    </div>
+    <div class="card-body">
+      <h5 class="card-text">الهيئة العامة للتأمين الاجتماعي</h5>
+    </div>
+  </div>
+
+  <div class="card-simple-medium">
+    <div class="card-image">
+      <img src="https://www.bahrain.bh/dxresources/logo/entity/Tender_Board_logo.png" alt="مجلس المناقصات والمزايدات">
+    </div>
+    <div class="card-body">
+      <h5 class="card-text">مجلس المناقصات والمزايدات</h5>
+    </div>
+  </div>
+
+  <div class="card-simple-medium">
+    <div class="card-image">
+      <img src="https://www.bahrain.bh/dxresources/logo/entity/Ministry_of_Foreign_Affairs_logo.png" alt="وزارة الخارجية">
+    </div>
+    <div class="card-body">
+      <h5 class="card-text">وزارة الخارجية</h5>
+    </div>
+  </div>
+
+  <div class="card-simple-medium">
+    <div class="card-image">
+      <img src="https://www.bahrain.bh/dxresources/logo/entity/Ministry_of_Industry_and_Commerce_logo.png" alt="وزارة الصناعة والتجارة">
+    </div>
+    <div class="card-body">
+      <h5 class="card-text">وزارة الصناعة والتجارة</h5>
+    </div>
+  </div>
+
+  <div class="card-simple-medium">
+    <div class="card-image">
+      <img src="https://www.bahrain.bh/dxresources/logo/entity/Royal_Humanitarian_Foundation_logo.png" alt="المؤسسة الملكية للأعمال الانسانية">
+    </div>
+    <div class="card-body">
+      <h5 class="card-text">المؤسسة الملكية للأعمال الانسانية</h5>
+    </div>
+  </div>
+
+  <div class="card-simple-medium">
+    <div class="card-image">
+      <img src="https://www.bahrain.bh/dxresources/logo/entity/Telecommunications_Regulatory_Authority_logo.png" alt="هيئة تنظيم الاتصالات">
+    </div>
+    <div class="card-body">
+      <h5 class="card-text">هيئة تنظيم الاتصالات</h5>
+    </div>
+  </div>
+
+  <div class="card-simple-medium">
+    <div class="card-image">
+      <img src="https://www.bahrain.bh/dxresources/logo/entity/bqa_logo.png" alt="هيئة جودة التعليم والتدريب">
+    </div>
+    <div class="card-body">
+      <h5 class="card-text">هيئة جودة التعليم والتدريب</h5>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</body>
+</html>

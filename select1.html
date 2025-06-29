@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع خدمات</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      padding-top: 100px; 
+      padding-bottom: 60px; 
+      background-color: #f9f9f9;
+      
+    }
+
+    
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100px; /* نفس الارتفاع اللي حددته في padding-top للbody */
+  background-color: white; /* أو أي لون تحبه للخلفية */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+  padding: 0 20px; /* مساحة أفقية داخل الهيدر */
+  box-sizing: border-box;
+}
+
+    header img {
+      width: 150px;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* عمودين */
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    .card-simple-medium {
+      width: 100%; /* يعبي الخلية بالكامل */
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: box-shadow 0.3s;
+      overflow: hidden;
+    }
+
+    .card-simple-medium:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-img-top {
+      width: 48px;
+      margin: 20px auto 10px auto;
+      display: block;
+    }
+
+    .card-body {
+      padding: 10px;
+    }
+
+    h5.card-text {
+      margin: 10px 0;
+      font-size: 16px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 20px auto;
+      box-sizing: border-box;
+    }
+
+    .card-image img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+video#videodesktop {
+  display: block;
+  width: calc(100% - 8px); 
+  height: 400px;
+  margin: 4px auto 0 auto; 
+  padding: 0;
+  z-index: 0;
+}
+
+#text1{
+    text-align: center;
+}
+
+    .main-container {
+      background-color: #ededed; 
+      padding: 30px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column; 
+      gap: 20px;
+      padding: 10px !important;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .box {
+      background-color: #ffffff; 
+      border-radius: 15px;
+      width: 100%;
+      height: 45px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      align-items: center;
+      padding: 15px;             
+  display: flex;            
+  justify-content: center;   
+  align-items: center;       
+  text-align: center;        
+  box-sizing: border-box; 
+    }
+        .box.active {
+      background-color: #b8c2b8; /* لون أخضر */
+      color: white;
+    }
+    #imghedar{
+        margin-left: 200px;
+    }
+     #imghedar{
+        margin-left: 200px;
+        width: 240px;
+        margin-left: -1px;
+    }
+  </style>
+</head>
+<body>
+
+    
+<header>
+  <img id="imghedar" src="Logo_ar.svg" alt="شعار">
+</header>
+
+
+ 
+	
+	
+
+<div style="text-align: center;">
+
+
+<div class="intro-alt intro-alt--size3" bis_skin_checked="1">
+	<div class="container" bis_skin_checked="1">
+		<div class="row intro__row align-items-center" bis_skin_checked="1">
+			<div class="col-12 col-md-3 intro__col intro__col--size1" bis_skin_checked="1">
+				<div class="intro__image" bis_skin_checked="1">
+					<img src="https://www.bahrain.bh/dxresources/images/svg/themes/Identity-Passport-and-Visa.svg" alt="الهوية والجوازات والتأشيرات">
+				</div>
+			</div>
+
+			<div class="col intro__col" bis_skin_checked="1">
+				<div class="intro__inner" bis_skin_checked="1">
+					
+
+					<span>خدمات إلكترونية مصنفة تحت</span>
+					
+					<h1>الهوية والجوازات والتأشيرات</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+ <div class="main-container">
+    
+    <div class="box">الهوية</div>
+    <div class="box">الجوازات والسفر</div>
+    <div class="box">التأشيرات</div>
+    <div class="box">الإقامة</div>
+  </div>
+  <img src="Sharekna+Banner+bahrain.bh-04.jpg" style="max-width: 100%; height: auto;" alt="صورة كاملة">
+
+
+
+
+  <div class="grid-container">
+  <div class="card-simple-medium">
+    <div class="card-image">
+      <img src="https://www.bahrain.bh/dxresources/logo/entity/Survey_and_Land_Registration_Bureau_logo.png" alt="جهاز المساحة والتسجيل العقاري">
+    </div>
+    <div class="card-body">
+      <h5 class="card-text">جهاز المساحة والتسجيل العقاري</h5>
+    </div>
+  </div>
+
+  <div class="card-simple-medium">
+    <div class="card-image">
+      <img src="https://www.bahrain.bh/dxresources/logo/entity/Social_Insurance_Organization_logo.png" alt="الهيئة العامة للتأمين الاجتماعي">
+    </div>
+    <div class="card-body">
+      <h5 class="card-text">الهيئة العامة للتأمين الاجتماعي</h5>
+    </div>
+  </div>
+
+  <div class="card-simple-medium">
+    <div class="card-image">
+      <img src="https://www.bahrain.bh/dxresources/logo/entity/Tender_Board_logo.png" alt="مجلس المناقصات والمزايدات">
+    </div>
+    <div class="card-body">
+      <h5 class="card-text">مجلس المناقصات والمزايدات</h5>
+    </div>
+  </div>
+
+  <div class="card-simple-medium">
+    <div class="card-image">
+      <img src="https://www.bahrain.bh/dxresources/logo/entity/Ministry_of_Foreign_Affairs_logo.png" alt="وزارة الخارجية">
+    </div>
+    <div class="card-body">
+      <h5 class="card-text">وزارة الخارجية</h5>
+    </div>
+  </div>
+
+  <div class="card-simple-medium">
+    <div class="card-image">
+      <img src="https://www.bahrain.bh/dxresources/logo/entity/Ministry_of_Industry_and_Commerce_logo.png" alt="وزارة الصناعة والتجارة">
+    </div>
+    <div class="card-body">
+      <h5 class="card-text">وزارة الصناعة والتجارة</h5>
+    </div>
+  </div>
+
+  <div class="card-simple-medium">
+    <div class="card-image">
+      <img src="https://www.bahrain.bh/dxresources/logo/entity/Royal_Humanitarian_Foundation_logo.png" alt="المؤسسة الملكية للأعمال الانسانية">
+    </div>
+    <div class="card-body">
+      <h5 class="card-text">المؤسسة الملكية للأعمال الانسانية</h5>
+    </div>
+  </div>
+
+  <div class="card-simple-medium">
+    <div class="card-image">
+      <img src="https://www.bahrain.bh/dxresources/logo/entity/Telecommunications_Regulatory_Authority_logo.png" alt="هيئة تنظيم الاتصالات">
+    </div>
+    <div class="card-body">
+      <h5 class="card-text">هيئة تنظيم الاتصالات</h5>
+    </div>
+  </div>
+
+  <div class="card-simple-medium">
+    <div class="card-image">
+      <img src="https://www.bahrain.bh/dxresources/logo/entity/bqa_logo.png" alt="هيئة جودة التعليم والتدريب">
+    </div>
+    <div class="card-body">
+      <h5 class="card-text">هيئة جودة التعليم والتدريب</h5>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+  <script>
+    const boxes = document.querySelectorAll('.box');
+    const links = [
+      'selecthkome.html',
+      'selecthkome.html',
+      'selecthkome.html',
+      'selecthkome.html'
+    ];
+
+    boxes.forEach((box, index) => {
+      box.addEventListener('click', () => {
+        box.classList.add('active');
+
+        setTimeout(() => {
+          window.location.href = links[index];
+        }, 30); // 
+      });
+    });
+  </script>
+</body>
+</html>

